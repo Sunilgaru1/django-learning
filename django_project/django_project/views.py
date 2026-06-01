@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 def home(request):
 
-    #return HttpResponse("Hello User , You are now at Home Page.")
-    return render(request,'website/home/index.html')
+    #return HttpResponse("Hello User , You are now at Home Page.") # direct responce
+    return render(request,'website/home/index.html') # using templates
 
 def about(request):
     # return HttpResponse("Hello User , You are now at About Page.")

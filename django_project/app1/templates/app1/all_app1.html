@@ -1,12 +1,23 @@
-{% extends "app1/index.html" %}
+{% extends "layout/index.html" %}
 
 {% block title%}
 App's Page
 {% endblock %}
 
 {% block content %}
-<h1>All Apps Home page</h1>
+<h1>All Apps download Home page</h1>
+
+{%for App in Apps%}
+
+<div class = "app1-item">
+    <img src="{{App.image.url}}" alt="">
+    <h3>{{App.name}}</h3>
+</div>
+
+{% endfor %}
+
 {% endblock %}
+
 
 
 {% comment %} everything here is replayed bacause we are using common layout {% endcomment %}
