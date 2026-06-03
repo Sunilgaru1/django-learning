@@ -4,17 +4,30 @@
 App's Page
 {% endblock %}
 
+
 {% block content %}
 <h1>All Apps download Home page</h1>
 
-{%for App in Apps%}
+<div class ="grid grid-cols-3 gap-4 m-4">
+    
+    {%for app in apps%}
+    
+    <div class = "bg-blue-400 p-5 rounded">
+        <img class = "rounded shadow-lg"src="{{app.image.url}}" alt="">
+        <h3 class="text-2xl font-bold">{{app.name}}</h3>
+        <a href="{% url 'app_detail' app.id %}">
+            <button 
+            type="button"
+            class = "bg-cyan-400 text-black px-5 py-2 rounded shadow-lg hover:bg-cyan-300"
+            >
+                {{app.id}} - {{app.type}} - {{app.price}}
+            </button>
+        </a>
 
-<div class = "app1-item">
-    <img src="{{App.image.url}}" alt="">
-    <h3>{{App.name}}</h3>
+    </div>
+    
+    {% endfor %}
 </div>
-
-{% endfor %}
 
 {% endblock %}
 

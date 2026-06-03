@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import appVarity
+from .models import AppVarity
 
 # Register your models here.
-admin.site.register(appVarity)
+admin.site.register(AppVarity)

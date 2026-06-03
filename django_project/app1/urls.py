@@ -1,9 +1,9 @@
 from django.urls import path
 from . import views
 
-#localhost:8000/app1
+#localhost:8000/apps
 
 urlpatterns = [
-    path('',views.all_app1,name= 'all_app1'),
-   
+    path('',views.all_apps,name= 'all_apps'),
+    path('<int:app_id>/',views.app_detail,name= 'app_detail'),
 ]
